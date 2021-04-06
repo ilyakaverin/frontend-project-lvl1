@@ -1,8 +1,4 @@
 ---
-plugins:
-  # https://github.com/jest-community/eslint-plugin-jest
-  - jest
-
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
   node: true
@@ -10,7 +6,6 @@ env:
 
 extends:
   - 'airbnb-base'
-  - 'plugin:jest/recommended'
 
 parserOptions:
   ecmaVersion: 11
