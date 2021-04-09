@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { user, even } from '../src/even.js';
 
-console.log(`Hi ${user}!`);
+import result from '../src/even.js';
 
-console.log(`we will play ${even}`);
+console.log(`${result}`);
