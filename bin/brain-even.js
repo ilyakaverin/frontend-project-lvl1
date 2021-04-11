@@ -2,4 +2,4 @@
 
 import finalResult from '../src/isEvenLoop.js';
 
-console.log(finalResult)
+console.log(finalResult);
