@@ -13,18 +13,21 @@ let result;
 if (firstQ !== 'Correct!') {
   result = firstQ;
 } else {
-  do {
-    if (firstQ !== 'Correct!') {
-      result = firstQ;
-      winCount -= 1;
-    } else {
-      const newNum = randomNum();
-      const newAnswer = readlineSync.question(`${firstQ}\n${winCount}\nQuestion: ${newNum}\nYou answer: `);
-      firstQ = isEven(newAnswer, newNum);
+  while (winCount < 3) {
+    const newNum = randomNum();
+    const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum}\nYou answer: `);
+    firstQ = isEven(newAnswer, newNum);
+    if (firstQ === 'Correct!') {
       winCount += 1;
+    } else {
+      result = firstQ;
+      break;
     }
-  } while (winCount < 3);
+  }
+}
+if (winCount === 3) {
+  result = `${firstQ}\nCongratulations ${userName}!`;
 }
 
-const finalResult = `${result} + ${winCount}`;
-export default finalResult;
+const brainEven = `${result}`;
+export default brainEven;

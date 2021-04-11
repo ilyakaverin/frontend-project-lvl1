@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import finalResult from '../src/isEvenLoop.js';
+import brainEven from '../src/isEvenLoop.js';
 
-console.log(finalResult);
+console.log(brainEven);
