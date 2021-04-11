@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import result from '../src/even.js';
+import finalResult from '../src/isEvenLoop.js';
 
-console.log(`${result}`);
+console.log(finalResult)
