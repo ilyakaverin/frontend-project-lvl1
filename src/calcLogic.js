@@ -12,7 +12,7 @@ export const calculation = (num1, num2, randomOperator) => {
       break;
     default: return false;
   }
-  return `${num1} ${randomOperator} ${num2}\n ${result}`;
+  return result;
 };
 export const calcGame = (sum, answer) => {
   let result;
@@ -20,6 +20,9 @@ export const calcGame = (sum, answer) => {
     result = 'Correct!';
   } else {
     result = `${answer} is wrong answer ;(. Correct answer was ${sum}.`;
+  }
+  if (Number(sum) !== Number(answer)) {
+    result = 'incorrect input';
   }
   return result;
 };
