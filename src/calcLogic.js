@@ -21,8 +21,5 @@ export const calcGame = (sum, answer) => {
   } else {
     result = `${answer} is wrong answer ;(. Correct answer was ${sum}.`;
   }
-  if (Number(sum) !== Number(answer)) {
-    result = 'incorrect input';
-  }
   return result;
 };

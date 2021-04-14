@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import userName from './cli.js';
-import randomNum from './index.js';
+import { randomNum } from './index.js';
 import isEven from './isEvenLogic.js';
 
 const randomNumber = randomNum();
