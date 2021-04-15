@@ -1,10 +1,9 @@
 export const gcd = (x, y) => {
-  while (y) {
-    const t = y;
-    y = x % y;
-    x = t;
+  if (!y) {
+    return x;
   }
-  return x;
+
+  return gcd(y, x % y);
 };
 
 export const gcdGame = (gcdResult, answer) => {
