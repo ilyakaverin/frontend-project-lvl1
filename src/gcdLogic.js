@@ -9,10 +9,10 @@ export const gcd = (x, y) => {
 
 export const gcdGame = (gcdResult, answer) => {
   let result;
-  if (gcd === answer) {
+  if (gcdResult === answer) {
     result = 'Correct!';
   } else {
-    result = `${answer} is wrong answer ;(. Correct answer was ${gcd}.`;
+    result = `${answer} is wrong answer ;(. Correct answer was ${gcdResult}.`;
   }
   return result;
 };
