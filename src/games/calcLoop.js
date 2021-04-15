@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import userName from './cli.js';
-import { randomNum, startGame } from './index.js';
-import calculation from './calcLogic.js';
+import userName from '../cli.js';
+import { randomNum, startGame } from '../index.js';
+import calculation from '../calcLogic.js';
 
 const arrayOfOperators = ['+', '-', '*'];
 const randomOperator = arrayOfOperators[Math.floor(Math.random() * arrayOfOperators.length)];

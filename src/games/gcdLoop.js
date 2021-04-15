@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import userName from './cli.js';
-import { randomNum, startGame } from './index.js';
-import gcd from './gcdLogic.js';
+import userName from '../cli.js';
+import { randomNum, startGame } from '../index.js';
+import gcd from '../gcdLogic.js';
 
 const num1 = randomNum();
 const num2 = randomNum();

@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import userName from './cli.js';
-import { randomNum } from './index.js';
-import isEven from './isEvenLogic.js';
+import userName from '../cli.js';
+import { randomNum } from '../index.js';
+import isEven from '../isEvenLogic.js';
 
 const randomNumber = randomNum();
 const answer = readlineSync.question(`Hi ${userName}!\nAnswer "yes" if the number is even, otherwise answer "no".\nQuestion:${randomNumber}\nYour answer: `);
