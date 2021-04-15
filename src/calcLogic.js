@@ -1,4 +1,4 @@
-export const calculation = (num1, num2, randomOperator) => {
+const calculation = (num1, num2, randomOperator) => {
   let result;
   switch (randomOperator) {
     case '+':
@@ -14,12 +14,5 @@ export const calculation = (num1, num2, randomOperator) => {
   }
   return result;
 };
-export const calcGame = (sum, answer) => {
-  let result;
-  if (sum === answer) {
-    result = 'Correct!';
-  } else {
-    result = `${answer} is wrong answer ;(. Correct answer was ${sum}.`;
-  }
-  return result;
-};
+
+export default calculation;

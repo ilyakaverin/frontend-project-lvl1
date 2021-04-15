@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import userName from './cli.js';
-import { randomNum } from './index.js';
-import { gcd, gcdGame } from './gcdLogic.js';
+import { randomNum, startGame } from './index.js';
+import gcd from './gcdLogic.js';
 
 const num1 = randomNum();
 const num2 = randomNum();
 const gcdResult = gcd(num1, num2);
 const answer = readlineSync.question(`Hi ${userName}!\nFind the greatest common divisor of given numbers.\nQuestion: ${num1} ${num2}\nYour answer: `);
-let firstQ = gcdGame(gcdResult, Number(answer));
+let firstQ = startGame(gcdResult, Number(answer));
 let result;
 let winCount = 1;
 
@@ -19,7 +19,7 @@ if (firstQ !== 'Correct!') {
     const newNum2 = randomNum();
     const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum1} ${newNum2}\nYou answer: `);
     const newCalc = gcd(newNum1, newNum2);
-    firstQ = gcdGame(newCalc, Number(newAnswer));
+    firstQ = startGame(newCalc, Number(newAnswer));
     if (firstQ === 'Correct!') {
       winCount += 1;
     } else {

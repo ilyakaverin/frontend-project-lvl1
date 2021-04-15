@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 import userName from './cli.js';
-import { randomNum, randomOperator } from './index.js';
-import { calculation, calcGame } from './calcLogic.js';
+import { randomNum, randomOperator, startGame } from './index.js';
+import calculation from './calcLogic.js';
 
 const num1 = randomNum();
 const num2 = randomNum();
 const firstCalc = calculation(num1, num2, randomOperator);
 const answer = readlineSync.question(`Hi ${userName}\nWhat is the result of the expression?\nQuestion: ${num1} ${randomOperator} ${num2}\nYour answer: `);
 let winCount = 1;
-let firstQ = calcGame(firstCalc, Number(answer));
+let firstQ = startGame(firstCalc, Number(answer));
 let result;
 
 if (firstQ !== 'Correct!') {
@@ -19,7 +19,7 @@ if (firstQ !== 'Correct!') {
     const newNum2 = randomNum();
     const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum1} ${randomOperator} ${newNum2}\nYou answer: `);
     const newCalc = calculation(newNum1, newNum2, randomOperator);
-    firstQ = calcGame(newCalc, Number(newAnswer));
+    firstQ = startGame(newCalc, Number(newAnswer));
     if (firstQ === 'Correct!') {
       winCount += 1;
     } else {
