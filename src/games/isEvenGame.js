@@ -27,7 +27,7 @@ if (firstQ !== 'Correct!') {
   }
 }
 if (winCount === 3) {
-  result = `${firstQ}\nCongratulations ${userName}!`;
+  result = `${firstQ}\nCongratulations, ${userName}!`;
 }
 
 const brainEven = `${result}`;
