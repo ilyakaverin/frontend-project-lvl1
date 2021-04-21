@@ -6,7 +6,7 @@ export const startGame = (question, answer) => {
   if (question === answer) {
     result = 'Correct!';
   } else {
-    result = `${answer} is wrong answer ;(. Correct answer was ${question}.\nLet's try again, ${userName}`;
+    result = `${answer} is wrong answer ;(. Correct answer was ${question}.\nLet's try again, ${userName}!`;
   }
   return result;
 };
