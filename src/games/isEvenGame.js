@@ -4,7 +4,7 @@ import { randomNum, startGame } from '../index.js';
 import isEven from '../isEvenLogic.js';
 
 const randomNumber = randomNum();
-const answer = readlineSync.question(`Hi ${userName}!\nAnswer "yes" if the number is even, otherwise answer "no".\nQuestion:${randomNumber}\nYour answer: `);
+const answer = readlineSync.question(`Hi ${userName}!\nAnswer "yes" if the number is even, otherwise answer "no".\nQuestion: ${randomNumber}\nYour answer: `);
 const question = isEven(randomNumber);
 let firstQ = startGame(question, answer);
 let winCount = 1;

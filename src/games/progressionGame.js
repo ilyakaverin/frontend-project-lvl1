@@ -9,7 +9,7 @@ const missingValueProgression = missingValueArray(firstProgression);
 const questionValue = firstProgression[missingValueProgression.indexOf('..')];
 
 let winCount = 1;
-const answer = readlineSync.question(`Hi ${userName}!\nWhat number is missing in the progression?\nQuestion:\n${missingValueProgression.join(' ')}\nYour answer: `);
+const answer = readlineSync.question(`Hi ${userName}!\nWhat number is missing in the progression?\nQuestion: ${missingValueProgression.join(' ')}\nYour answer: `);
 
 let firstQ = startGame(questionValue, Number(answer));
 let result;
