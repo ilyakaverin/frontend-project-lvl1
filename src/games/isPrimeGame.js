@@ -15,7 +15,7 @@ if (firstQ !== 'Correct!') {
 } else {
   while (winCount < 3) {
     const newNum = randomNum();
-    const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum}\nYou answer: `);
+    const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum}\nYour answer: `);
     const newQuestion = isPrime(newNum);
     firstQ = startGame(newQuestion, newAnswer);
     if (firstQ === 'Correct!') {
