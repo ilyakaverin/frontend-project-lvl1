@@ -21,7 +21,7 @@ if (firstQ !== 'Correct!') {
     const newProgression = initProgression();
     const newMissingValueProgression = missingValueArray(newProgression);
     const newQuestionValue = newProgression[newMissingValueProgression.indexOf('..')];
-    const newAnswer = readlineSync.question(`${firstQ}\nQuestion:${newMissingValueProgression.join(' ')}\nYou answer: `);
+    const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newMissingValueProgression.join(' ')}\nYou answer: `);
     firstQ = startGame(newQuestionValue, Number(newAnswer));
     if (firstQ === 'Correct!') {
       winCount += 1;
