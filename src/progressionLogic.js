@@ -14,7 +14,7 @@ export const initProgression = () => {
 };
 export const missingValueArray = (array) => {
   const newArray = [...array];
-  const randomValueFromArray = Math.floor(Math.random() * array.length);
+  const randomValueFromArray = Math.floor(Math.random() * array.length - 1);
   newArray[randomValueFromArray] = '..';
   return newArray;
 };
