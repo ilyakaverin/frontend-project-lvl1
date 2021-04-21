@@ -4,7 +4,7 @@ import { randomNum, startGame } from '../index.js';
 import calculation from '../calcLogic.js';
 
 const arrayOfOperators = ['+', '-', '*'];
-const randomOperator = arrayOfOperators[Math.floor(Math.random() * arrayOfOperators.length)];
+const randomOperator = arrayOfOperators[Math.floor(Math.random() * arrayOfOperators.length - 1)];
 
 const num1 = randomNum();
 const num2 = randomNum();
