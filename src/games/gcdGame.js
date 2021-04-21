@@ -5,9 +5,9 @@ import gcd from '../gcdLogic.js';
 
 const num1 = randomNum();
 const num2 = randomNum();
-const gcdResult = gcd(num1, num2);
+const question = gcd(num1, num2);
 const answer = readlineSync.question(`Hi ${userName}!\nFind the greatest common divisor of given numbers.\nQuestion: ${num1} ${num2}\nYour answer: `);
-let firstQ = startGame(gcdResult, Number(answer));
+let firstQ = startGame(question, Number(answer));
 let result;
 let winCount = 1;
 
@@ -18,8 +18,8 @@ if (firstQ !== 'Correct!') {
     const newNum1 = randomNum();
     const newNum2 = randomNum();
     const newAnswer = readlineSync.question(`${firstQ}\nQuestion: ${newNum1} ${newNum2}\nYou answer: `);
-    const newCalc = gcd(newNum1, newNum2);
-    firstQ = startGame(newCalc, Number(newAnswer));
+    const newQuestion = gcd(newNum1, newNum2);
+    firstQ = startGame(newQuestion, Number(newAnswer));
     if (firstQ === 'Correct!') {
       winCount += 1;
     } else {
